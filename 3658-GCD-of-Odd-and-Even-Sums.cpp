@@ -9,4 +9,4 @@ public:
         int sumOdd = n*n;
         return gcd(sumEven,sumOdd);
     }
-};
+}; //we can directly do return n also
