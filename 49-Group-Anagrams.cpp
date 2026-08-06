@@ -5,8 +5,10 @@ public:
         unordered_map<string,vector<string>> anagramMap;
 
         for(string str : strs){
-            string key  = str;
-            sort(key.begin(),key.end());
+            char count[26]={0};
+            for(char c: str) count[c-'a']++;
+            
+            string key(count, 26);
 
             anagramMap[key].push_back(str);
         }
